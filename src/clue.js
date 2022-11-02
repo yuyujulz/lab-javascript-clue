@@ -95,30 +95,31 @@ const weaponsArray = [
 
 // ITERATION 2
 
-function selectRandom(suspectsArray, roomsArray, weaponsArray ) {
+function selectRandom(randomEl) {
 let arrRandoms = '';
-if((suspectsArray.length === 0) && (suspectsArray.length === 0) &&(suspectsArray.length === 0)) {
+
+if(randomEl.length === 0) {
     return undefined
 }
-for (let i = 0; i < suspectsArray.firstName.lengh; i++) {
-   let arrRandoms = arrRandoms.push(math.floor(Math.random()* 7))
-    
-}
-for (let i = 0; i < roomsArray.lengh; i++) {
-   let arrRandoms = arrRandoms.push(math.floor(Math.random() * 16))
-    
-}
-for (let i = 0; i < weaponsArray.lengh; i++) {
-    let arrRandoms = arrRandoms.push(math.floor(Math.random() * 10))
-
-}
-return arrRandoms
+return arrRandoms = randomEl[Math.floor(randomEl.length * Math.random())]
+  
 }
 
-function pickMystery() {}
+function pickMystery() {
+   return {
+        suspect: selectRandom(suspectsArray),
+        weapon: selectRandom(weaponsArray),
+        room: selectRandom(roomsArray)
+    }
+    
+}
 
 
 // ITERATION 3
 
-function revealMystery() {}
+function revealMystery() {
+    return `${pickMystery.suspect.firstName} ${pickMystery.suspect.lastName} killed Mr. Boddy using the 
+    ${pickMystery.weapon.name} in the ${pickMystery.room.name}!`
+    
+}
 
