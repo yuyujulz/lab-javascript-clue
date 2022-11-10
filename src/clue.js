@@ -98,7 +98,7 @@ const weaponsArray = [
 function selectRandom(randomEl) {
 let arrRandoms = '';
 
-if(randomEl.length === 0) {
+if(randomEl.length === 0){
     return undefined
 }
 return arrRandoms = randomEl[Math.floor(randomEl.length * Math.random())]
